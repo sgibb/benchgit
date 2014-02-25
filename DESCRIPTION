@@ -1,0 +1,16 @@
+Package: benchgit
+Version: 0.1
+Date: 2014-02-25
+Title: Benchmarking different git branches
+Authors@R: c(person("Sebastian", "Gibb", role=c("aut", "cre"),
+    email="mail@sebastiangibb.de"))
+Maintainer: Sebastian Gibb <mail@sebastiangibb.de>
+Depends:
+    R (>= 3.0.0),
+    devtools
+Description: This packages allows the benchmarking of R functions in different
+    git branches.
+License: GPL (>= 3)
+URL: https://github.com/sgibb/benchgit/
+BugReports: https://github.com/sgibb/benchgit/issues/
+LazyLoad: yes
