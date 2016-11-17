@@ -1,6 +1,6 @@
 git_checkout <- function(branch) {
   stopifnot(is.character(branch) && nchar(branch) > 0)
-  system(paste("git checkout", branch))
+  system(paste("git checkout", branch, "--force"))
 }
 
 git_current_branch <- function() {
