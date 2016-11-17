@@ -28,8 +28,8 @@
 
 benchgit <- function(FUN, packagePath=".", branches, replications=100) {
   fun <- match.call()[-1][["FUN"]]
-  results <- sapply(branches, .benchbranch, 
-                    packagePath=packagePath, 
+  results <- sapply(branches, .benchbranch,
+                    packagePath=packagePath,
                     fun=fun,
                     replications=replications)
   relative <- results/min(results)
@@ -49,10 +49,10 @@ benchgit <- function(FUN, packagePath=".", branches, replications=100) {
   unload(packagePath)
   git_checkout(curBranch)
   setwd(wd)
-  return(m)
+  m
 }
 
 .bench <- function(fun, replications=100) {
-  return(system.time(replicate(replications, { eval(fun); NULL }))[3])
+  system.time(replicate(replications, { eval(fun); NULL }))[3]
 }
 

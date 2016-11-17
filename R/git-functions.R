@@ -4,5 +4,5 @@ git_checkout <- function(branch) {
 }
 
 git_current_branch <- function() {
-  return(system("git rev-parse --abbrev-ref HEAD", intern=TRUE))
+  system("git rev-parse --abbrev-ref HEAD", intern=TRUE)
 }
